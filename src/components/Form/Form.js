@@ -48,5 +48,4 @@ const Form = ({ currentId, setCurrentId }) => {
     </Paper>
   );
 };
-
 export default Form;
