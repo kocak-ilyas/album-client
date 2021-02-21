@@ -1,0 +1,30 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "airbnb": true,
+        "prettier": true,
+        "prettier/react": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "standard"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "prettier"
+    ],
+    "rules": {
+        "arrow-body-style":[
+            2,
+            "as-needed"
+        ]
+    }
+}

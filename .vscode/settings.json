@@ -1,0 +1,49 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "explorer.confirmDelete": false,
+  "git.autofetch": true,
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": true,
+  "window.menuBarVisibility": "visible",
+  "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "extensions.autoUpdate": true,
+  // "workbench.colorTheme": "Material Theme Lighter High Contrast",
+  "[javascriptreact]": {
+  
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "[css]": {
+      "editor.defaultFormatter": "aeschli.vscode-css-formatter"
+  },
+  "files.associations": {
+      "*.js": "javascriptreact"
+  },
+  "workbench.sideBar.location": "left",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.renderControlCharacters": true,
+  "editor.minimap.enabled": false,
+  "editor.largeFileOptimizations": false,
+  "prettier.endOfLine": "auto",
+  "prettier.singleQuote": true,
+  "editor.formatOnSave": true,
+  "prettier.useTabs": true,
+  "prettier.requireConfig": true,
+  "workbench.colorTheme": "Visual Studio Dark",
+  "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontFamily": "Fira Code"
+}
