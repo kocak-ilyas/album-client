@@ -11,14 +11,22 @@ import useStyles from "./styles";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Input from "./Input";
 
-const SignUp = () => {
+const Auth = () => {
   const classes = useStyles();
-  const [isSignup, setIsSignup] = useState(true);
+  const [isSignup, setIsSignup] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const handleSubmit = () => {};
-  const handleChange = () => {};
+  const handleSubmit = () => {
+
+  };
+  const handleChange = () => {
+    
+  };
   const handleShowPassword = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+  const switchMode = () => {
+    setIsSignup((prevIsSignup)=>!prevIsSignup)
+    handleShowPassword(false)
   };
 
   return (
@@ -76,11 +84,18 @@ const SignUp = () => {
               type="submit"
               fullWidth
               variant="contained"
-              color="primar"
+              color="primary"
               className={classes.submit}
             >
               {isSignup ? "Sign Up" : "Sign In"}
             </Button>
+            <Grid container justify="flex-end">
+              <Grid item>
+                <Button onClick={switchMode}>
+{isSignup ? "Already have an acoount?" : "Don't have an account? Sign Up"}
+                </Button>
+              </Grid>
+            </Grid>
           </form>
         </Paper>
       </Container>
@@ -88,4 +103,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Auth;
