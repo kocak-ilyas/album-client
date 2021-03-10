@@ -1,7 +1,7 @@
 import { Container, Grid, Grow } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { getPosts } from "../../actions/posts";
+import { getPosts } from "../../redux/actions/posts";
 import Form from "../Form/Form";
 import Posts from "../Posts/Posts";
 
