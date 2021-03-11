@@ -17,9 +17,9 @@ const Navbar = () => {
           variant="h2"
           align="center"
         >
-          Album
+          Album<img className={classes.image} src={album} alt="icon" height="60" />
         </Typography>
-        <img className={classes.image} src={album} alt="icon" height="60" />
+        
       </div>
       <Toolbar className={classes.toolbar}>
         {user ? (
