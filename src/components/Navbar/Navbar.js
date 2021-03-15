@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AppBar, Avatar, Button, Toolbar, Typography } from "@material-ui/core";
 import useStyles from "./styles";
@@ -6,7 +6,14 @@ import album from "../../images/album.png";
 
 const Navbar = () => {
   const classes = useStyles();
-  const user = null;
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+
+  useEffect(() => {
+    const token = user?.token;
+    // JWT
+    setUser(JSON.parse(localStorage.getItem("profile")));
+  }, []);
+
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
       <div className={classes.brandContainer}>
@@ -17,9 +24,9 @@ const Navbar = () => {
           variant="h2"
           align="center"
         >
-          Album<img className={classes.image} src={album} alt="icon" height="60" />
+          Album
+          <img className={classes.image} src={album} alt="icon" height="60" />
         </Typography>
-        
       </div>
       <Toolbar className={classes.toolbar}>
         {user ? (

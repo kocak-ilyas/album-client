@@ -1,45 +1,48 @@
 import React, { useState } from "react";
 import { GoogleLogin } from "react-google-login";
-import {
-  Avatar,
-  Button,
-  Paper,
-  Grid,
-  Typography,
-  Container,
-} from "@material-ui/core";
+import { useDispatch } from "react-redux";
+import { Avatar, Button, Paper, Grid, Typography, Container} from "@material-ui/core";
 import Icon from "./icon";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import useStyles from "./styles";
 import Input from "./Input";
 
 const Auth = () => {
+  const dispatch = useDispatch();
+
   const classes = useStyles();
   const [isSignup, setIsSignup] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+
   const handleSubmit = () => {
     console.log("object");
   };
+
   const handleChange = () => {
     console.log("object");
   };
+
   const handleShowPassword = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
+
   const switchMode = () => {
     setIsSignup((prevIsSignup) => !prevIsSignup);
     handleShowPassword(false);
   };
+
   const googleSuccess = async (res) => {
-    const results = res?.profileObj;
+    const result = res?.profileObj;
     const token = res?.tokenId;
 
     try {
-      dispatch();
+      dispatch({ type: "AUTH", data: { result, token } });
+      history.pushState("/")
     } catch (error) {
       console.log(error);
     }
   };
+  
   const googleFailure = (error) => {
     console.log("Google Sign in unsuccessful. Try again", error);
   };
