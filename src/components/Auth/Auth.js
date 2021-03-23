@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { GoogleLogin } from "react-google-login";
 import { useDispatch } from "react-redux";
-import { Avatar, Button, Paper, Grid, Typography, Container} from "@material-ui/core";
+import { useHistory } from "react-router-dom";
+import {
+  Avatar,
+  Button,
+  Paper,
+  Grid,
+  Typography,
+  Container,
+} from "@material-ui/core";
 import Icon from "./icon";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import useStyles from "./styles";
@@ -9,6 +17,7 @@ import Input from "./Input";
 
 const Auth = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const classes = useStyles();
   const [isSignup, setIsSignup] = useState(false);
@@ -37,12 +46,12 @@ const Auth = () => {
 
     try {
       dispatch({ type: "AUTH", data: { result, token } });
-      history.pushState("/")
+      history.push("/");
     } catch (error) {
       console.log(error);
     }
   };
-  
+
   const googleFailure = (error) => {
     console.log("Google Sign in unsuccessful. Try again", error);
   };
