@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const url = 'http://localhost:4000/posts'
-// const url = "https://album-server-project.herokuapp.com/posts"
+// const url = 'http://localhost:4000/posts'
+const url = "https://album-server-project.herokuapp.com/posts"
 
 export const fetchPosts = () => axios.get(url);
 export const createPost = (newPost) => axios.post(url, newPost);
