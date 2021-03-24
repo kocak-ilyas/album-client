@@ -1,9 +1,10 @@
 {
     "name": "album-client",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "author": "ilyas",
     "license": "MIT",
     "description": "Album written by ilyas",
+    "proxy": "http://localhost:5000",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/kocak-ilyas/album-client.git"
