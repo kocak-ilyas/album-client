@@ -105,6 +105,6 @@ dist
 
 package-lock.json
 .eslintrc.js
-/.vscode
+# /.vscode
 /package.json
 t_mern_memories-PART_3/.vscode
